@@ -14,7 +14,7 @@ function youknownothingjonsnow(){
   var HEIGHT = window.innerHeight;
   canvas.width = WIDTH;
   canvas.height = HEIGHT;
-  var quantity = 80;
+  var quantity = 60;
   var particles = [];
   for (var i = 0; i < quantity; i++) {
      particles.push({
@@ -26,7 +26,7 @@ function youknownothingjonsnow(){
   }
   function draw() {
      ctx.clearRect(0, 0, WIDTH, HEIGHT);
-     ctx.fillStyle = "rgba(255, 255, 255, 1)";
+     ctx.fillStyle = "rgba(255, 255, 255, 255)";
      for (var i = 0; i < quantity; i++) {
         var p = particles[i];
         ctx.font= p.r * 7 + "px sans-serif";
