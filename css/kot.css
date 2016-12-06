@@ -8,5 +8,276 @@
 *********************************************************/
 
 @import url("reset.css"); 
-body {height: 100vh; width: 100vw; background: #000; background: linear-gradient(to bottom right, #ebf9fe 5%, #87afe5);}
-body #kot {position: fixed; top:0px; left:0px; width:100%; height:100%;}
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+html, body
+{
+  font-family: 'Indie Flower', cursive;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+	display: block;
+}
+
+p
+{
+  position: absolute;
+  font-style: italic;
+  bottom: 0vh;
+  right: 2vh;
+  font-size: 2vh;
+  color: lightgrey;
+}
+
+body
+{  
+  background: #7c5353;
+background: -moz-radial-gradient(center, ellipse cover,  #7c5353 0%, #0b0011 100%);
+background: -webkit-radial-gradient(center, ellipse cover,  #7c5353 0%,#0b0011 100%);
+background: radial-gradient(ellipse at center,  #7c5353 0%,#0b0011 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c5353', endColorstr='#0b0011',GradientType=1 );
+
+}
+
+.cc
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.bc
+{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*============================*/
+/*============TREE============*/
+
+.tree
+{
+  width: 70vh;
+  height: 80%;
+}
+
+.segment::before
+{
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #1f4f15 transparent;
+  border-radius: 40%;
+}
+
+.segment
+{
+  top: 35%;
+  overflow: hidden;
+}
+
+.segment::after
+{
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-style: solid;
+  border-color: transparent transparent #F9F9F9 transparent;
+  border-radius: 35%;
+}
+
+.segment[value="0"]{width: 70vh; height: 70vh; z-index:0;}
+.segment[value="1"]{width: 50vh; height: 50vh; z-index:1;}
+.segment[value="2"]{width: 30vh; height: 30vh; z-index:2;}
+.segment[value="0"]::before{border-width: 35vh;}
+.segment[value="1"]::before{border-width: 25vh;}
+.segment[value="2"]::before{border-width: 15vh;}
+.segment[value="0"]::after{border-width: 23.5vh;}
+.segment[value="1"]::after{border-width: 14vh;}
+.segment[value="2"]::after{border-width: 7vh;}
+
+.highlight
+{
+  position: absolute;
+  width: 10%;
+  height: 35%;
+  bottom: 3.25%;
+  left: 67.25%;
+  border-radius: 0 0 0 100%;
+  transform: rotate(-45deg);
+  background: #216315;
+}
+
+.stump
+{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 15vh;
+  height: 25vh;
+  background: #3f2b27;
+  transform: translateX(-50%);
+  border-radius: 6vh;
+  overflow: hidden;
+}
+
+.stump::after
+{
+  content: ' ';
+  position: absolute;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background: #47332b;
+  border-radius: 0 0 0 100%;
+}
+
+.ball
+{
+  position: absolute;
+  bottom: 0;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 5vh;
+  background: #7a3232;
+  transform-origin: 50% -50%;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+.ball::after
+{
+  content: ' ';
+  position: absolute;
+  top: 10%;
+  right: 12.5%;
+  width: 50%;
+  height: 40%;
+  border-radius: 100%;
+  background: #D14B4B;
+}
+
+.ball:nth-child(1) 
+{
+    bottom: 10%;
+    left: 20%;
+}
+
+.ball:nth-child(2) 
+{
+    bottom: 7.5%;
+    left: 65%;
+}
+
+.ball:nth-child(3) 
+{
+    bottom: 3%;
+    left: 42.5%;
+}
+
+/*============TREE============*/
+/*============================*/
+
+/*============================*/
+/*==========PRESENTS==========*/
+.present:before
+{
+  content: ' ';
+  display: none;
+}
+
+.present.open::before
+{
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  transform: translateY(-100%);
+  background: #5B1616;
+  border-radius: 10%;
+  display: block;
+}
+
+.present
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 12vh;
+  height: 12vh;
+  background: #7f2121;
+  transition: transform 0.2s ease-in;
+  transform-origin: center center;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.bow
+{
+  width: 30%;
+  height: 100%;
+  background: #D4C228;
+  z-index: 2;
+}
+ 
+.bow::after
+{
+  content: ' ';
+  display: block;
+  width: 90%;
+  height: 100%;
+  background: #E0CF43;
+  transform: rotate(90deg);
+}
+
+.bow:nth-child(2)
+{
+  top: 0;
+  left: -62.5%;
+  width: 175%;
+  height: 30%;
+  transform: translate(14%,-100%) scale(0.575);
+  z-index: 2;
+  background: #847A23;
+  display: none;
+}
+
+.bow:nth-child(2)::after
+{
+  position: absolute;
+  top: -49%;
+  left: 31.5%;
+  width: 37.5%;
+  height: 175%;
+  background: #9D912D;
+}
+
+.present.open .bow:nth-child(2)
+{
+  display: block;
+}
+/*==========PRESENTS==========*/
+/*============================*/
+/*============================*/
+/*==========LETTERS===========*/
+.letter
+{
+  position: absolute;
+  font-size: 5vh;
+  color: white;
+  transition: all 1s ease-in-out;
+  text-align: center;
+}
+/*==========LETTERS===========*/
+/*============================*/
