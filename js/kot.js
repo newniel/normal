@@ -1,3 +1,15 @@
+$('.container').on('mouseover', function(){
+  $('.bauble').addClass('light');
+  $('.star').addClass('star-light');
+})
+
+$('.container').on('mouseout', function(){
+  $('.bauble').removeClass('light');
+})
+
+
+
+
 var balls = document.getElementsByClassName("ball");
 
 var presents = document.getElementsByClassName("present");
