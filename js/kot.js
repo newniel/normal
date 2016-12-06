@@ -26,7 +26,7 @@ function youknownothingjonsnow(){
   }
   function draw() {
      ctx.clearRect(0, 0, WIDTH, HEIGHT);
-     ctx.fillStyle = "rgba(255, 255, 255, 255)";
+     ctx.fillStyle = "#fff";
      for (var i = 0; i < quantity; i++) {
         var p = particles[i];
         ctx.font= p.r * 7 + "px sans-serif";
