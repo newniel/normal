@@ -288,8 +288,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c5353', end
 
 .container {
   position: absolute;
-  left: 0px;
-  bottom: 314px;
+  bottom: 0vh;
+  left: 2vh;
 }
 
 .socks {
