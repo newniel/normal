@@ -7,40 +7,6 @@
 
 *********************************************************/
 
-@import url("reset.css"); 				/*  스타일 초기화	*/
-
-@font-face{font-family:rubrik; src:url(RUBRIK.woff)}
-@font-face{
-	font-family:rubrik;
-	src:local(※), 
-	url('../fonts/RUBRIK.woff') format('woff');
-}
-@font-face{font-family:rubrik_light; src:url(RUBRIK.woff)}
-@font-face{
-	font-family:rubrikextralight;
-	src:local(※), 
-	url('../fonts/RUBRIK EXTRALIGHT.woff') format('woff');
-}
-/**/
-*{margin:0; padding:0; font-family: rubrik;}
-.section1{background:url(../images/section01.jpg) center 0 no-repeat; height:971px; padding:1px 0 0 0;}
-.section1 .logo{margin:208px 0 115px 0; text-align:center;}
-.section1 .comming{text-align:center;}
-.section1 .arrow_down{margin:125px 0 0 0; text-align:center;}
-.section2{height:583px; background:#65637a;}
-.section2 h2{font-size:60px; color:#FFF; display:inline-block; margin-top:60px; float:left;}
-.section2 h2 span {font-size:46px; color:#FFF;}
-.section2 p{font-family: rubrikextralight; font-size:18px; color:#FFF; margin:60px 0 0 32px; display:inline-block; float:left; line-height:30px;}
-.center{width:1200px; margin:0 auto; padding:1px 0 0 0; position:relative;}
-.section3 .left{position:absolute; top:75px; left:0; background:#b045b1; opacity:0.8; width:386px; height:510px; padding:50px 37px ; box-sizing:border-box;}
-.section3 h2{font-size:30px; color:#FFF; opacity:1;}
-.section3 p{color:#FFF; opacity:1;}
-.section3 p a{color:#FFF; opacity:1;}
-.section3 .address{font-family: rubrikextralight; margin:25px 0; line-height:20px;}
-.section3 h3{color:#FFF; opacity:1; margin:0 0 34px 0;}
-.section3 .call{font-family: rubrikextralight; background:url(../images/call.png) 0 0 no-repeat; height:21px; padding-left:35px; text-decoration:underline; padding-top:3px; margin-bottom:25px;}
-.section3 .email{background:url(../images/email.png) 0 0 no-repeat; height:15px; padding-left:35px; text-decoration:underline; padding-top:0px; margin-bottom:25px;} 
-.section3 .email a{font-family: rubrikextralight;}
-.section3 .director{font-family: rubrikextralight; margin-bottom:10px;}
-.section3 .no_bg{background:none; padding:0;}
-.section3 .no_bg a{font-family: rubrikextralight;}
+@import url("reset.css"); 
+body {height: 100vh; width: 100vw; background: #ebf9fe; background: linear-gradient(to bottom right, #ebf9fe 5%, #87afe5);}
+body #kot {position: fixed; top:0px; left:0px; width:100%; height:100%;}

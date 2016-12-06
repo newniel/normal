@@ -8,7 +8,7 @@ window.requestAnimFrame = (function() {
 })();
 
 function youknownothingjonsnow(){
-  var canvas = document.getElementById("❄️");
+  var canvas = document.getElementById("kot");
   var ctx = canvas.getContext("2d");
   var WIDTH = window.innerWidth;
   var HEIGHT = window.innerHeight;
@@ -30,7 +30,7 @@ function youknownothingjonsnow(){
      for (var i = 0; i < quantity; i++) {
         var p = particles[i];
         ctx.font= p.r * 7 + "px sans-serif";
-        ctx.fillText("❄️",p.x, p.y);
+        ctx.fillText("❄",p.x, p.y);
      }
      update();
   }
