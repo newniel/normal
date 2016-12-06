@@ -42,6 +42,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c5353', end
 
 }
 
+#wrap{position:relative;}
+
 .cc
 {
   position: absolute;
@@ -286,8 +288,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c5353', end
 
 .container {
   position: absolute;
-  left: 300px;
-  top: 50px;
+  left: 10%;
+  bottom: 314px;
 }
 
 .socks {
