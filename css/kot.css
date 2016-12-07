@@ -596,3 +596,27 @@ h1 {
   background-color: #c7928c;
   color: #fff;
 }
+
+
+.santa {
+  background-image: url(http://www.netanimations.net/Animated_santa_reindeer_flying.gif);
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+span {
+  color: white;
+  font-family: Consolas, monaco, monospace;
+  font-size: 2em;
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
