@@ -7,12 +7,13 @@
 	<link type="text/css" rel="stylesheet" href="css/kot.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/audio.min.js"></script>
 	<script src="js/kot.js"></script>
 	<script>
-	var audio = document.getElementById('audio');
-	audio.play(); // This will silently fail
-	audio.currentTime = 2;
-	</script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
 </head>
 <BODY>
 <div class="container">
