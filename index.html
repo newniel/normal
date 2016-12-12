@@ -10,7 +10,8 @@
 	<script src="js/kot.js"></script>
 	<script>
 	var audio = document.getElementById('audio');
-	audio.play();
+	audio.play(); // This will silently fail
+	audio.currentTime = 2;
 	</script>
 </head>
 <BODY>
