@@ -7,8 +7,27 @@
 	<link type="text/css" rel="stylesheet" href="css/kot.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile.custom.min.js"></script>
-	<script src="js/audio.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 	<script src="js/kot.js"></script>
+	<script type="text/javascript">
+	 $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function() {
+          $(this).jPlayer("setMedia", {
+            mp3: "https://newniel.github.io/normal/music/Mariah%20Carey%20-%20All%20I%20Want%20For%20Christmas%20Is%20You.mp3"
+          }).jPlayer("play");
+          var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
+          var kickoff = function () {
+            $("#jquery_jplayer_1").jPlayer("play");
+            document.documentElement.removeEventListener(click, kickoff, true);
+          };
+          document.documentElement.addEventListener(click, kickoff, true);
+        },
+        swfPath: "/js",
+        loop: true
+      });
+    });
+  </script>
 </head>
 <BODY>
 <div class="container">
