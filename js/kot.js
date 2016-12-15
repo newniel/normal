@@ -321,11 +321,3 @@ tl.from(scene1.body, 0.5, {
 }, 0.2)
 
 tl.timeScale(1.55);
-
-
-// Sound
-var sound = new Howl({
-  src: ['https://d3vv6lp55qjaqc.cloudfront.net/items/1m2v060s0q3C0r1s3Y2U/song.mp3?X-CloudApp-Visitor-Id=1390331'],
-  autoplay: true,
-  loop: true
-});
