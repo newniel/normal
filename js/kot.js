@@ -321,3 +321,4 @@ tl.from(scene1.body, 0.5, {
 }, 0.2)
 
 tl.timeScale(1.55);
+}
