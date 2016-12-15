@@ -1,6 +1,4 @@
-const tl = new TimelineMax({
-	repeat: -1
-})
+
 
 const svg = document.querySelector('svg')
 
