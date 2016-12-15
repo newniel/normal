@@ -600,3 +600,16 @@ h1 {
   background-color: #c7928c;
   color: #fff;
 }
+
+
+//산타
+svg {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 0);
+	width: 500px;
+	height: 500px;
+	backface-visibility: hidden;
+	z-index: 3;
+}
