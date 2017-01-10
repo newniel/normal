@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="../css/swiper.min.css">
 		<script src="../js/jquery-3.1.1.min.js"></script>
 	</head>
-	<body>
+	<body onload="scrollNav()">
 		<section class="win-event-mo">
 			<header>
 				<!-- [Start] 꿀텐츠 모음전 배너 -->
@@ -279,9 +279,8 @@
 						}
 					})
 				};
-				window.onload = function () {
 				scrollNav();
-			}
+
 				// nav 클릭시 해당 영역으로 이동
 				(function(){
 					// 해당 영역의 top만큼 스크롤 이동
