@@ -263,20 +263,18 @@
 				console.log(navH);
 				// scroll nav
 				function scrollNav(){
-					var navOffTop = nav.offset().top; // 네비 게이션의 offset Top
+					//var navOffTop = nav.offset().top; // 네비 게이션의 offset Top
 					var scrollSwitch = true;
 					$(window).scroll(function(){ // 스크롤시
 						if($(window).scrollTop() >= navH){ // 스크롤 Top 값이 네비게이션의 높이와 같거나 크다면
 							if(scrollSwitch === true){ // 스크롤 스위치가 true 일 때
 								scrollSwitch = false; // 스위치 작동
-								console.log("aaa");
 								nav.addClass("on"); // 클래스 추가
 							}
 						} else {
 							if(scrollSwitch === false){
 								scrollSwitch = true;
 								nav.removeClass("on");
-								console.log("bbb");
 							}
 						}
 					})
