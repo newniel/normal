@@ -12,8 +12,8 @@
 	@media all and (max-width:360px){html{font-size:10px}}
 	#wrap{padding: 10px;}
 	.input_wrap{width: 100%; margin-bottom:10px }
-	.input_wrap input{width: 100%; padding:10px 0px;}
-	.input_wrap .desc{display: none; background: #5594cc;}
+	.input_wrap input{width: 100%; padding:10px 0px;box-sizing: border-box; font-size:1.6rem;}
+	.input_wrap .desc{display: none; background: #5594cc;color: #FFF; padding:5px 2px 5px 2px; margin:0;font-size:1.4rem;}
 	.input_wrap .desc.on{display: block;}
 
 </style>
@@ -34,7 +34,7 @@
 	</div>
 <script type="text/javascript">
 	$('.input_wrap input').on('click', function(){
-		$(this).next().animate({height: 'toggle'}, 1000, 'swing');
+		$(this).next().animate({height: 'toggle'}, 500, 'swing');
 	});
 </script>
 </body>
