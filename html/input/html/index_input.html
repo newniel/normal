@@ -13,8 +13,9 @@
 	#wrap{padding: 10px;}
 	.input_wrap{width: 100%; margin-bottom:10px }
 	.input_wrap input{width: 100%; padding:10px 0px;}
-	.input_wrap .desc{display: none;}
+	.input_wrap .desc{display: none; background: #5594cc;}
 	.input_wrap .desc.on{display: block;}
+
 </style>
 </head>
 <body>
@@ -33,7 +34,7 @@
 	</div>
 <script type="text/javascript">
 	$('.input_wrap input').on('click', function(){
-		$(this).next().animate({height: 'toggle'}, 300, 'swing');
+		$(this).next().animate({height: 'toggle'}, 1000, 'swing');
 	});
 </script>
 </body>
